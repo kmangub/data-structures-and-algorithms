@@ -42,8 +42,12 @@ For example:
 const isNum = (input) => {
   // Solution code here...
   let validator = /[0-9]/g;
-
-  return validator.test(input);
+  input = String(input);
+  if (input.match(validator)) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,10 +59,12 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let firstLetter = /b[A-Z]/g;
-
-  console.log(firstLetter);
-  return firstLetter.test(str);
+  let regex = /[A-Z]\w+/g;
+  if (regex.test(str)) {
+    return str.match(regex);
+  } else {
+    return [];
+  }
   // Solution code here...
 };
 
@@ -69,6 +75,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
+  let regex = /^[A-J]/;
+  let newArray = [];
+  arr.forEach( (value) => {
+    if (regex.test(value)) {
+      newArray.push(value);
+    }
+  });
+  return newArray;
   // Solution code here...
 };
 
