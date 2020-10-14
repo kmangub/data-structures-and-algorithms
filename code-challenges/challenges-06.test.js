@@ -71,11 +71,14 @@ let $ = createSnippetWithJQuery(`
 
 const templatingWithMustache = () => {
   // Solution code here...
+  let newArr = [];
+
   characters.forEach(characters => {
     let $template = $('#template').html();
     let rendered = Mustache.render($template, characters);
-    $('section').append(rendered);
+    newArr.push(rendered);
   });
+  return newArr;
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -104,9 +107,12 @@ Write a function named getHouses that returns a new array containing the names o
 
 const getHouses = (arr) => {
   let houses = [];
-  arr
-  // Solution code here...
+
+  arr.forEach(char => {
+    houses.push(char.house);
+  });
   return houses;
+  // Solution code here...
 };
 
 /*------------------------------------------------------------------------------------------------
@@ -123,7 +129,15 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-
+  let hasChildren = false;
+  Object.values(arr).forEach(value => {
+    if (value.name === character) {
+      if (value.children.length > 0) {
+        hasChildren = true;
+      }
+    }
+  });
+  return hasChildren;
 };
 
 /* ------------------------------------------------------------------------------------------------
