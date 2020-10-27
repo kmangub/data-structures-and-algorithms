@@ -26,6 +26,7 @@ const createServer = () => {
   const app = express();
 
   // Routes go here
+
   // Solution code here...
   app.get('/events', getCurrentEvents);
 
