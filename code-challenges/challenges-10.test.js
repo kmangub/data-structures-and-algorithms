@@ -85,9 +85,9 @@ const totalSum = (input) => {
       newInput.push(int);
     });
   });
-  let sum = newInput.reduce(function(a,b){
+  let sum = newInput.reduce(function (a, b) {
     return a + b;
-  }, 0 );
+  }, 0);
   return sum;
 };
 
@@ -105,6 +105,22 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  let newArray = [];
+  // We need a method to remove elements that not numbers and are not divisible by 5 and put them in arrays
+  input.map((val) => {
+    // console.log(val);
+    let newArray1 = val.reduce((arr, int) => {
+      if (int % 5 === 0 && typeof (int) === 'number') {
+        arr.push(Math.pow(2, int));
+      }
+      return arr;
+    }, []);
+    newArray.push(newArray1);
+  });
+  return newArray;
+  // We need a method to iterate through the resulting array and raise 2 to element in the new array
+
+  // ****Collaborated with Anthony and Brandon****
 };
 
 /* ------------------------------------------------------------------------------------------------
