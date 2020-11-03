@@ -93,8 +93,20 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
-};
+  let treats = 0;
 
+  arr.forEach(stores => {
+    if (stores.store === 'Pet store') {
+      stores.items.forEach(item => {
+        if (item.name === 'Treats') {
+          treats = item.quantity;
+        }
+      });
+    }
+  });
+  return treats;
+};
+ 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
 
