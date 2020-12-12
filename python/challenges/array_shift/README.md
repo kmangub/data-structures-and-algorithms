@@ -11,4 +11,8 @@ We need to examine the array and think about some cases where it will not functi
 Brandon Gonzalez and Audrena Vacirca
 
 ## Solution
-![Code Challenge 2](../../../assets/shift-array.png)
+![Code Challenge 2](../../assets/shift-array.png)
+
+## Updates
+- Tests passing for both even and odd length lists.
+- Moved all the TOML files to the python root folder.
