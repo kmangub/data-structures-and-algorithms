@@ -18,3 +18,6 @@ Anthony, Alex, Nebiyu
 
 ## Solution
 ![Code Challenge 5](../../assets/linked-lists.png)
+
+## Pull Request 
+https://github.com/kmangub/data-structures-and-algorithms/pull/25
