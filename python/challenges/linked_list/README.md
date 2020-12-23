@@ -17,7 +17,15 @@ The Linked List reading prior to class was a good resource to use. We also used 
 Anthony, Alex, Nebiyu
 
 ## Solution
+
+### Linked Lists
 ![Code Challenge 5](../../assets/linked-lists.png)
+
+### Linked List Insertions
+![Code Challenge 5](../../assets/ll-insertions.png)
+
+### Kth From Ending
+![Code Challenge 5](../../assets/ll-kth-from-end.png)
 
 ## Pull Request 
 https://github.com/kmangub/data-structures-and-algorithms/pull/25
