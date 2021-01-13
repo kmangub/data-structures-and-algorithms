@@ -17,7 +17,7 @@ class Stack():
         current = self.top
     
         while current is not None:
-            output += f'{{ {current.value} }} -> None'
+            output += f'{{ {current.value} }} -> '
             current = current.next
         return output
     
@@ -51,20 +51,35 @@ class Queue():
         self.rear = None
 
     def __str__(self):
-        # { a } -> { b } -> { c } -> NULL
-
-        output = ''
-        current = self.front
+        # FRONT -> { a } -> { b } -> { c } -> { d } REAR
+        if self.front == None:
+            return "NULL"
+        output = 'FRONT -> '
+        front = self.front
+        rear = self.rear
     
-        while current is not None:
-            output += f'{{ {current.value} }} -> '
-            current = current.next
+        while front:
+            output += f'{front.value} -> '
+            front = front.next
+        output += 'REAR'
         return output
 
     def enqueue(self, value):
         node = Node(value)
-        node.next = self.front
-        self.rear = node
+        if self.is_empty():
+            self.front = self.rear = node 
+        else:
+            self.rear.next = node 
+            self.rear = self.rear.next
+
+    def dequeue(self):
+        if self.is_empty():
+            raise InvalidOperationError("Method not allowed on empty collection")
+        node = self.front
+        self.front = self.front.next
+        # FRONT -> { a } -> { b } -> { c } -> { d } REAR
+        return node.value
+
     
     def peek(self):
         if self.is_empty():
@@ -78,6 +93,7 @@ class Queue():
             return False
 
 if __name__ == "__main__":
+    # new_stack = Stack()
     # new_stack.push("apple")
     # new_stack.push("banana")
     # new_stack.push("cucumber")
@@ -89,5 +105,7 @@ if __name__ == "__main__":
     new_queue = Queue()
     new_queue.enqueue("apple")
     new_queue.enqueue("banana")
-    new_queue.enqueue("cucumber")
+    # new_queue.enqueue("cucumber")
     print(new_queue)
+    # print(new_queue.peek())
+    # FRONT -> apple -> REAR
