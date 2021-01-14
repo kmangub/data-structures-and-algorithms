@@ -12,7 +12,7 @@ We need to make sure that code challenge 10 has a working stacks and queues impl
 Anthony, Nebiyu, Jae, Brandon
 
 ## Solution
-![Code Challenge 5](../../assets/linked-lists.png)
+![Code Challenge 11](../../assets/queue-with-stacks.png)
 
 ## Pull Request 
 https://github.com/kmangub/data-structures-and-algorithms/pull/25
