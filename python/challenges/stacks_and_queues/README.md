@@ -25,3 +25,6 @@ The Stacks and Queues reading prior to class was a good resource to use. The rea
 
 ## Solution
 ![Code Challenge Class 10](../../assets/stack-and-queue.png)
+
+## Pull Request
+https://github.com/kmangub/data-structures-and-algorithms/pull/33
