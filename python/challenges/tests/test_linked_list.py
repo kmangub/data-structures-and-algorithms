@@ -13,18 +13,20 @@ def test_insert_list_with_value_5():
     assert actual == value
 
 def test_head_link():
-    actual = str(link)
-    value = '{5} -> {None} -> NULL'
-    assert actual == value
+    link_3 = LinkedList()
+    link_3.insert(5)
+    actual = str(link_3)
+    expected = '{ 5 } -> None'
+    assert actual == expected
 
 new_link = LinkedList()
 
 def test_multiple_insert():
-    new_link.insert(Node('c'))
-    new_link.insert(Node('b'))
-    new_link.insert(Node('a'))
+    new_link.insert('c')
+    new_link.insert('b')
+    new_link.insert('a')
     actual = str(new_link)
-    value = "{'a'} -> {'b'} -> {'c'} -> NULL"
+    value = "{ a } -> { b } -> { c } -> None"
     assert actual == value
 
 def test_find_value():
@@ -39,5 +41,5 @@ def test_false_includes():
 
 def test_collection():
     actual = str(new_link)
-    value = "{'a'} -> {'b'} -> {'c'} -> NULL"
+    value = "{ a } -> { b } -> { c } -> None"
     assert actual == value
