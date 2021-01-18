@@ -120,4 +120,5 @@ if __name__ == "__main__":
     new_linked.insert(3)
     new_linked.insert(2)
     new_linked.insert(1)
+    
 
