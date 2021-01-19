@@ -23,7 +23,7 @@ When we run the function, we should get the following outputs:
 
 ## Approach & Efficiency
 Using stacks for this code challenge will make things easier since we are dealing with paired brackets.  
-
+I refered to this solution here to build the code: https://www.educative.io/edpresso/balanced-brackets-in-python
 
 ## Solution
 ![Code Challenge 13](../../assets/multi-bracket-validation.png)
