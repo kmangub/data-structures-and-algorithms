@@ -29,4 +29,4 @@ I refered to this solution here to build the code: https://www.educative.io/edpr
 ![Code Challenge 13](../../assets/multi-bracket-validation.png)
 
 ## Pull Request 
-https://github.com/kmangub/data-structures-and-algorithms/pull/25
+https://github.com/kmangub/data-structures-and-algorithms/pull/40
