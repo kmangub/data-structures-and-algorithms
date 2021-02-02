@@ -40,6 +40,21 @@ class BinaryTree:
             post_order_list.append(root.value)
         traverse(self.root)
         return post_order_list
+    
+    def find_maximum_value(self):
+        max_value = 0
+        def traverse(root):
+            nonlocal max_value
+            if root.value > max_value:
+                max_value = root.value
+            if root.left:
+                traverse(root.left)
+            if root.right:
+                traverse(root.right)
+        traverse(self.root)
+        return max_value
+
+
 
 class BinarySearchTree(BinaryTree):
     def add(self, value):
@@ -61,28 +76,37 @@ class BinarySearchTree(BinaryTree):
             traverse(self.root)    
 
 if __name__ == "__main__":
-    a = Node("A")
-    b = Node("B")
-    c = Node("C")
-    d = Node("D")
-    e = Node("E")
-    f = Node("F")
-    tree = BinaryTree(Node("A"))
-    tree.root.left = b
-    tree.root.right = c
-    tree.root.left.left = d
-    tree.root.left.right = e
-    tree.root.right.left = f
+    # a = Node("A")
+    # b = Node("B")
+    # c = Node("C")
+    # d = Node("D")
+    # e = Node("E")
+    # f = Node("F")
+    # tree = BinaryTree(Node("A"))
+    # tree.root.left = b
+    # tree.root.right = c
+    # tree.root.left.left = d
+    # tree.root.left.right = e
+    # tree.root.right.left = f
     # print(tree.in_order())
     # print(tree.pre_order())
     # print(a.value)
     # print(tree.post_order())
-    tree2 = BinarySearchTree()
-    tree2.add(3)
-    tree2.add(4)
-    tree2.add(30)
-    tree2.add(25)
-    print(tree2.root.value)
-    print(tree2.root.right.value)
-    print(tree2.root.right.right.value)
-    print(tree2.root.right.right.left.value)
+    # tree2 = BinarySearchTree()
+    # tree2.add(3)
+    # tree2.add(4)
+    # tree2.add(30)
+    # tree2.add(25)
+    # print(tree2.root.value)
+    # print(tree2.root.right.value)
+    # print(tree2.root.right.right.value)
+    # print(tree2.root.right.right.left.value)
+
+    max_tree = BinaryTree(Node(600))
+    max_tree.root.left = Node(500)
+    max_tree.root.right = Node(300)
+    max_tree.root.left.left = Node(400)
+    max_tree.root.left.right = Node(100)
+    max_tree.root.right.left = Node(200)
+    print(max_tree.find_maximum_value())
+    # print(max_tree.pre_order())
