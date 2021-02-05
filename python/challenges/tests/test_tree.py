@@ -82,3 +82,20 @@ def test_instantiate_tree():
     actual = tree.find_maximum_value()
     expected = 11
     assert actual == expected
+
+def test_breadth_first():
+    a = Node("A")
+    b = Node("B")
+    c = Node("C")
+    d = Node("D")
+    e = Node("E")
+    f = Node("F")
+    tree = BinaryTree(Node("A"))
+    tree.root.left = b
+    tree.root.right = c
+    tree.root.left.left = d
+    tree.root.left.right = e
+    tree.root.right.left = f
+    actual = tree.breadth_first()
+    expected = ['A', 'B', 'C', 'D', 'E', 'F']
+    assert actual == expected 
