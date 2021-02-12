@@ -1,4 +1,4 @@
-## Tree
+## Fizz Buzz Tree
 - Write a function called FizzBuzzTree which takes a k-ary tree as an argument.
 - Without utilizing any of the built-in methods available to your language, determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:
 - If the value is divisible by 3, replace the value with “Fizz”
