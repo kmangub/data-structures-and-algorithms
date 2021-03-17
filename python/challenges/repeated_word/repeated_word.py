@@ -1,6 +1,10 @@
-from hashtable import HashTable
+# from hashtable import HashTable
 
-from linked_list import LinkedList, Node
+# from linked_list import LinkedList, Node
+from .hashtable import HashTable
+
+from .linked_list import LinkedList, Node
+
 import re
 
 def repeated_word(long_string):
@@ -12,5 +16,5 @@ def repeated_word(long_string):
         if hashy.contains(lower):  
             return lower
         else:
-            hashy.set(lower, lower)
+            hashy.add(lower, lower)
     return "No matches"
