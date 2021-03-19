@@ -36,13 +36,23 @@ def tree_intersection(tree1,tree2):
                 traverse2(root.right)
 
         traverse2(tree2.root)
+# [1, 1, 2]
+# [2]
 
-    for item in list_tree_1:
-        if item in list_tree_2:
-            intersection.append(item)
+#[1]
+    for i in range(len(list_tree_1)):
+        if list_tree_1[i] in list_tree_2:
+            intersection.append(list_tree_1[i])
+            list_tree_2.remove(list_tree_1[i])
     return intersection
 
-
+def traverse(root):
+    list_tree = []
+    list_tree_.append(root.value)
+    if root.left:
+        traverse(root.left)
+    if root.right:
+        traverse(root.right)
     
 if __name__ == "__main__":
     a = Node("A")
@@ -71,5 +81,16 @@ if __name__ == "__main__":
     # print(tree_intersection(tree,tree2))
     # print(tree2.root.left.left.value)
     # print(traverse(tree2.root))
-
-    print(tree_intersection(tree3,tree2))
+    # a = [1,1,2]
+    # b = [1,2]
+    # c = []
+    # for i in range(len(a)):
+        # print(i)
+        # print(a[i])
+        # if a[i] in b:
+        #     c.append(a[i])
+        #     b.remove(a[i])
+    # print(a)
+    # print(b)
+    # print(c)
+    # print(tree_intersection(tree3,tree2))
