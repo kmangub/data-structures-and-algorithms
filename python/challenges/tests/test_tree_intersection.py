@@ -1,5 +1,5 @@
 import pytest
-from challenges.tree_intersection.tree_intersection import tree_intersection, Node, BinaryTree
+from challenges.tree_intersection.tree_intersection import tree_intersection, Node, BinaryTree, pre_order
 
 def test_empty_tree_intersect_with_tree_with_one_node():
     t = BinaryTree()
