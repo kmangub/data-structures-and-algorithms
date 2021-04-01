@@ -80,3 +80,46 @@ def test_one_node_and_edge():
     actual = graph.get_neighbor(a)
     expected = [('a',1)]
     assert actual == expected
+
+def test_breadth_first_circle_start_a():
+    graph = Graph()
+    a = graph.add_node('a')
+    b = graph.add_node('b')
+    c = graph.add_node('c')
+    graph.add_edge(a, b)
+    graph.add_edge(b, c)
+    graph.add_edge(c, a)
+    actual = graph.breadth_first(a)
+    expected = ['a', 'b', 'c']
+    assert actual == expected
+
+def test_breadth_first_circle_start_b():
+    graph = Graph()
+    a = graph.add_node('a')
+    b = graph.add_node('b')
+    c = graph.add_node('c')
+    graph.add_edge(a, b)
+    graph.add_edge(b, c)
+    graph.add_edge(c, a)
+    actual = graph.breadth_first(b)
+    expected = ['b', 'c', 'a']
+    assert actual == expected
+
+def test_breadth_first_code_challenge_example():
+    graph = Graph()
+    a = graph.add_node('Pandora')
+    b = graph.add_node('Arendelle')
+    c = graph.add_node('Metroville')
+    d = graph.add_node('Monstropolis')
+    e = graph.add_node('Naboo')
+    f = graph.add_node('Narnia')
+    graph.add_edge(a, b)
+    graph.add_edge(b, d)
+    graph.add_edge(b, c)
+    graph.add_edge(c, d)
+    graph.add_edge(c, e)
+    graph.add_edge(c, f)
+    graph.add_edge(f, e)
+    actual = graph.breadth_first(a)
+    expected = ['Pandora', 'Arendelle', 'Monstropolis', 'Metroville', 'Naboo', 'Narnia']
+    assert actual == expected
