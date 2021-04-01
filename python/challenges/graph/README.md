@@ -22,6 +22,11 @@
 `Size()` method should:
 - Returns the total number of nodes in the graph
 
+`breadth_first` traversal method should:
+- Accepts a starting node
+- Return a collection of nodes in the order they were visited
+- Display the collection
+
 ## Testing
 - Node can be successfully added to the graph
 - An edge can be successfully added to the graph
