@@ -27,6 +27,11 @@
 - Return a collection of nodes in the order they were visited
 - Display the collection
 
+`depth_first` traversal method should:
+- Accepts an adjacency list
+- Return a collection of nodes in the order they were visited
+- Display the collection
+
 ## Testing
 - Node can be successfully added to the graph
 - An edge can be successfully added to the graph
@@ -39,3 +44,6 @@
 
 ## Collaborators
 Sam Clark
+
+## White Board
+![Code Challenge 38](../../assets/depth-first.png)
