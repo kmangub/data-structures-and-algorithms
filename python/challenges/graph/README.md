@@ -46,4 +46,6 @@
 Sam Clark
 
 ## White Board
+![Code Challenge 36](../../assets/breadth-first-graph.png)
+
 ![Code Challenge 38](../../assets/depth-first.png)
