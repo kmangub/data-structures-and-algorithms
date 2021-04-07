@@ -10,3 +10,6 @@ For testing, we need a working implementation of graphs before testing the follo
 
 ## Collaborators
 Sam Clark
+
+## Solution 
+![Code Challenge 37](../../assets/get-edge.png)
